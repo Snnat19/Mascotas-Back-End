@@ -128,13 +128,13 @@ class RegistroController extends Controller
 
         $validator = validator::make($request->all(),[
             'nombre' => 'required|max:200',
-            'email' => 'required|email|unique:usuarios,email', // Cambiado a usuarios
-            'documento' => 'required|unique:usuarios,documento', // Cambiado a usuarios
+            'email' => 'required|email|unique:usuarios,email', 
+            'documento' => 'required|unique:usuarios,documento', 
             'telefono' => 'required|digits:10',
-            'nom_mascota' => 'nullable|max:200', // Cambiado a nullable
-            'especie' => 'nullable|max:100', // Cambiado a nullable
-            'raza' => 'nullable|max:100', // Cambiado a nullable
-            'color' => 'nullable|max:50', // Cambiado a nullable
+            'nom_mascota' => 'nullable|max:200', 
+            'especie' => 'nullable|max:100', 
+            'raza' => 'nullable|max:100', 
+            'color' => 'nullable|max:50', 
             'ubicacion' => 'required|max:255',
             'fecha' => 'required|date',
         ]);
